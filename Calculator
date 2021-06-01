@@ -1,0 +1,24 @@
+package CS101.homework;
+import java.util.Scanner;
+public class TipCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the cost of your dinner: ");
+        double cost = sc.nextDouble();
+        System.out.println("Please enter your satisfaction level: " +
+                "1 = Totally Satisfied, 2 = Satisfied, 3 = Dissatisfied");
+        int rate = sc.nextInt();
+    if( rate == 1 ){
+        double tip = cost * 0.20;
+        System.out.println("You are totally satisfied, we suggest a tip of " + tip + " dollars (20%)");
+    }
+    else if( rate == 2){
+        double tip = cost * 0.15;
+        System.out.println("You are satisfied, we suggest a tip of " + tip +" dollars (15%)");
+    }
+    else if( rate == 3){
+        double tip = cost * 0.10;
+        System.out.println("You are dissatisfied, we suggest a tip of "+ tip + " dollars (10%)");
+    }
+    }
+}
